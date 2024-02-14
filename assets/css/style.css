@@ -1,0 +1,81 @@
+body {
+    background-image: url("../imgs/background.gif");
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+#container {
+    margin: 0px;
+}
+
+span {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+h2 {
+    color: white;
+}
+
+.slider-area {
+    position: absolute;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-width: 160vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_caption {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000038;
+    padding: 5%;
+}
+
+#card_btn {
+    margin-top: 50px;
+    max-width: 200px;
+    cursor: pointer;
+    --animate-duration: 1700ms;
+}
+
+.btn-container {
+    min-width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#si {
+    margin-bottom: 30px !important;
+    border-radius: 5px;
+    width: 200px;
+}
+#no {
+    margin-bottom: 30px !important;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 500;
+    transition: 500ms all;
+}
