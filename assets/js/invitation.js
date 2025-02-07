@@ -1,7 +1,7 @@
 const cuteTexts = [
     `<div class="slider_caption">
         <span>
-            Desde que estás a mi lado, mi vida empezó a sonar así y quisiera saber si quisieras escchar esta canción conmigo en vivo 🥰
+            Desde que estás a mi lado, mi vida empezó a sonar así y quisiera saber si quisieras escuchar esta canción conmigo en vivo 🥰
         </span>
         <div class="btn-container">
             <button id="next" class="btn btn-primary btn_slide">¡Claro que sí!</button>
