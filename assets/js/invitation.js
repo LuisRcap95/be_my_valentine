@@ -1,29 +1,20 @@
 const cuteTexts = [
     `<div class="slider_caption">
-        <img class="image_significative" src="./assets/imgs/care_cute.gif">
-        <span>Cuando estoy cerca de tí mis días más grises
-        se vuelven a color y con tu sonrisa iluminas mi vida más que el sol
-        quiero cuidarte siempre y así cómo los marineros se guían con las estrellas,
-        mis estrellas serán tus hermosos ojos</span>
+        <span>
+            Desde que estás a mi lado, mi vida empezó a sonar así y quisiera saber si quisieras escchar esta canción conmigo en vivo 🥰
+        </span>
         <div class="btn-container">
-            <button id="next" class="btn btn-primary btn_slide">¡Quédate conmigo!</button>
+            <button id="next" class="btn btn-primary btn_slide">¡Claro que sí!</button>
         </div>
     </div>`,
     `<div class="slider_caption">
-    <img class="image_significative" src="./assets/imgs/sleepy_bears.gif">
-    <span>No hay nada comparado con la tranquilidad que siento al estar contigo,
-    llenas mi corazón por completo y siento que estoy justo donde pertenezco 🥰</span>
-    <div class="btn-container">
-        <button id="next" class="btn btn-primary btn_slide">¡Te amo! 💖</button>
-    </div></div>`,
-    `<div class="slider_caption">
-    <img class="image_significative" src="./assets/imgs/be_my_valentine.jpg">
-    <span>Así que sólo me queda hacerte la pregunta...<br>
-    <h2>¿Serías mi valentin?</h2>
+    <span>
+        Ha sido un viaje increíble contigo y hay un evento cercano ahora. y esta es la pregunta más importante<BR>
+        <h2>¿Serías mi valentin?</h2>
     </span>
     <div class="btn-container">
-        <button id="si" class="btn btn-primary btn_slide">¡Me encantaría! 💕</button>
-        <button id="no" class="btn btn-danger btn_slide">Nunca 🤨</button>
+        <button id="si" class="btn btn-primary btn_slide">¡Me encantaría, amor! 💕</button>
+        <button id="no" class="btn btn-danger btn_slide">Nope 😌</button>
     </div>
     </div>`,
 ]
@@ -35,6 +26,11 @@ const messagesTryAgain = [
     '¡Vaya! de verdad quieres ir por este camino',
     'Tienes otra oportunidad 😁'
 ]
+
+const images = [
+    "./assets/media/be_my_valentine.jpg",
+    "./assets/media/fireworks.gif"
+];
 
 const animateClasses = [
     'animate__backInLeft',
@@ -62,6 +58,21 @@ const changeSlide = () => {
     sliderArea.className = `slider-area animate__animated ${ animateClasses[( Math.random() * 73437 | 0 ) % 5] }`;
     sliderArea.innerHTML = cuteTexts[counterQuestion];
 
+    document.body.style = `
+    background-image: url("${images[counterQuestion]}");
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    background-position: center 80%;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    `;
+
     container.appendChild( sliderArea );
 
     let msgNoCounter = 0
@@ -76,7 +87,7 @@ const changeSlide = () => {
     const maxHeigth = windowHeight - btnNoHeight;
 
     
-    if(counterQuestion < 2) {
+    if(counterQuestion < 1) {
         buttonNext.addEventListener( 'click', (e) => {
             e.preventDefault();
             counterQuestion++;
@@ -86,6 +97,7 @@ const changeSlide = () => {
     else {
         buttonSi.addEventListener( 'click', (e) => {
             e.preventDefault();
+            console.log("change page");
             window.location.replace('said_yes.html');
         })
 

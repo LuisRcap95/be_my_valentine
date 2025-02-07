@@ -1,5 +1,5 @@
 body {
-    background-image: url("../imgs/background.gif");
+    background-image: url("../media/background.gif");
     margin-top: 0px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -43,7 +43,7 @@ h2 {
 
 .slider_caption {
     min-height: 100vh;
-    max-width: 100vw;
+    min-width: 100vw;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
